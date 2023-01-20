@@ -4,11 +4,16 @@
 
 <div id="posts">
   <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
+   <div class="ui card">
+      <%= render post %>
+      <div class="extra content">
+        <p>
+          <%= link_to "Show this post", post %>
+        </p>
+      </div>
+   </div>
   <% end %>
 </div>
 
-<%= link_to "New post", new_post_path %>
+
+<%= link_to '<button class="ui button">New post</button>'.html_safe, new_post_path %>
