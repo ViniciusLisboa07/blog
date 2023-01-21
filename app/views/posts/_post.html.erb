@@ -1,6 +1,9 @@
 
+<div class="image">
+    <img>
+</div>
+
 <div class="content">
-    
   <div class="header" id="<%= dom_id post %>">
     <p>
       <%= post.tittle %>
@@ -19,6 +22,6 @@
 
     <p>
       <strong>Content:</strong>
-      <%= post.content %>
+      <%= post.content.to_plain_text.truncate(120) %>
     </p>
 </div>
