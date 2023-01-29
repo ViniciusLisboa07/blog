@@ -1,4 +1,18 @@
-<div id="<%= dom_id(comment) %>">
-  <%= comment.content %>
-  - <%= time_tag comment.created_at, "data-local": "time-ago" %>
+<div class="comment" id="<%= dom_id(comment) %>">
+  <%# <a class="avatar">
+    <img src="/images/avatar/small/matt.jpg">
+  </a> %>
+  
+  <div class="content">
+
+      <a class="author">Nome</a>
+      <div class="metadata">
+        <%= time_tag comment.created_at, "data-local": "time-ago" %>
+      </div>
+
+      <div class="text">
+        <%= comment.content %>
+      </div>
+
+  </div>
 </div>

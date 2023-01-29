@@ -1,7 +1,8 @@
-<h2>Comments</h2>
 
 <div id="comments">
-  <%= render post.comments %>
-</div>
+  <h3 class="ui dividing header">Comments</h3>
 
-<%= render "comments/new", post:post %>
+  <%= render "comments/comments", comments: post.comments %>
+
+  <%= render "comments/new", post:post %>
+</div>

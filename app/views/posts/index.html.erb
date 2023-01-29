@@ -1,18 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Posts</h1>
-
-<div class="ui cards">
-  <% @posts.each do |post| %>
-   <div class="ui card">
-      <%= render post %>
-      <div class="extra content">
-        <p>
-          <%= link_to "Show this post", post %>
-        </p>
-      </div>
-   </div>
-  <% end %>
+<div class="ui container">
+  <div class="ui one cards">
+    <% @posts.each do |post| %>
+    <div class="ui card">
+        <%= render post %>
+        <div class="extra content">
+          <p>
+            <%= link_to "Show this post", post %>
+          </p>
+        </div>
+    </div>
+    <% end %>
+  </div>
 </div>
 
 

@@ -12,16 +12,15 @@
 </div>
 
 <div class="content">
+    <p class="ui label">
+      <%= time_tag post.created_at, "data-local": "time-ago"%>
+    </p>
+
     <p>
-      Posted <%= time_tag post.created_at, "data-local": "time-ago"%>
+      <%= post.content.to_plain_text.truncate(180) %>
     </p>
 
     <p>
       <strong><%= pluralize post.comments.count, "comment" %></strong>
-    </p>
-
-    <p>
-      <strong>Content:</strong>
-      <%= post.content.to_plain_text.truncate(120) %>
     </p>
 </div>

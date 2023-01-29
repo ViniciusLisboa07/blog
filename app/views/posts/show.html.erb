@@ -1,11 +1,28 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
-<%= render "posts/comments", post: @post %>
+<div class="ui container">
+  <div class="content">
+    <div class="header">
+      <h1>
+        <%= @post.tittle %>
+      </h1>
+      <p class="ui label">
+        <%= time_tag @post.created_at, "data-local": "time-ago"%>
+      </p>
+    </div>
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+    <div>
+      <div>
+        <p>
+          <%= @post.content %>
+        </p>
+      </div>
+    </div>
+  </div>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
+  <div class="content">
+    <%= link_to "Back to posts", posts_path %>
+  </div>
+
+  <%= render "posts/comments", post: @post %>
 </div>

@@ -1,5 +1,5 @@
-<%= form_with model: [ post, Comment.new ] do |form| %>
+<%= form_with model: [ post, Comment.new ], class: "ui reply form" do |form| %>
   Your comment:<br>
-  <%= form.text_area :content, size: "20x5" %>
-  <%= form.submit %>
+  <%= form.text_area :content, size: "20x5", class: "field" %>
+  <%= form.submit class: "ui blue submit icon button" %>
 <% end %>
